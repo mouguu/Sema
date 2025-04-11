@@ -1,6 +1,6 @@
 
 
-# 🧠 `project: sema` — *A speculative generative language for sovereign cognitive design*
+#  `project: sema` — *A speculative generative language for sovereign cognitive design*
 
 
 
