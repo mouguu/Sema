@@ -1,5 +1,5 @@
 (ns sema.emergent-test
-  (:require [clojure.test :refer :all]
+  (:require [clojure.test :refer [deftest is testing]]
             [sema.emergent :as emergent]
             [clara.rules :as clara]))
 
@@ -9,7 +9,7 @@
                       (clara/insert (emergent/->Field :curiosity 0.7 :slow))
                       (clara/insert (emergent/->Entity "e1" "semiotic" :dormant))
                       (clara/fire-rules))
-          events (clara/query session emergent/get-events)]
+          events (emergent/get-events session)]
       (is (= 1 (count events)))
       (let [event (first events)]
         (is (= :individuation (:type (:?event event))))
@@ -20,7 +20,7 @@
                       (clara/insert (emergent/->Field :curiosity 0.5 :slow)) ; Below threshold
                       (clara/insert (emergent/->Entity "e1" "semiotic" :dormant))
                       (clara/fire-rules))
-          events (clara/query session emergent/get-events)]
+          events (emergent/get-events session)]
       (is (empty? events))))
   
   (testing "individuation doesn't trigger for non-semiotic substrate"
@@ -28,7 +28,7 @@
                       (clara/insert (emergent/->Field :curiosity 0.7 :slow))
                       (clara/insert (emergent/->Entity "e1" "material" :dormant)) ; Wrong substrate
                       (clara/fire-rules))
-          events (clara/query session emergent/get-events)]
+          events (emergent/get-events session)]
       (is (empty? events))))
   
   (testing "individuation doesn't trigger for non-dormant entities"
@@ -36,5 +36,5 @@
                       (clara/insert (emergent/->Field :curiosity 0.7 :slow))
                       (clara/insert (emergent/->Entity "e1" "semiotic" :active)) ; Not dormant
                       (clara/fire-rules))
-          events (clara/query session emergent/get-events)]
+          events (emergent/get-events session)]
       (is (empty? events))))) 

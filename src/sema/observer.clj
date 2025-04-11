@@ -1,14 +1,13 @@
 (ns sema.observer
-  (:require [clara.rules :as clara]
-            [sema.emergent :as emergent]
+  (:require [sema.emergent :as emergent]
             [clojure.pprint :as pp]))
 
 (defn observe-state
   "Query and format the state of a Clara session for human consumption"
   [session]
-  (let [fields (clara/query session emergent/get-fields)
-        entities (clara/query session emergent/get-entities)
-        events (clara/query session emergent/get-events)]
+  (let [fields (emergent/get-fields session)
+        entities (emergent/get-entities session)
+        events (emergent/get-events session)]
     (with-out-str
       (println "=== Observed State ===")
       (println "\nFields:")

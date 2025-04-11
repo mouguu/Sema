@@ -1,5 +1,5 @@
 (ns sema.field-test
-  (:require [clojure.test :refer :all]
+  (:require [clojure.test :refer [deftest is testing]]
             [sema.field :as field]))
 
 (deftest test-update-field

@@ -28,7 +28,8 @@
         tension-type (when type-match (keyword (second type-match)))
         magnitude (when mag-match (read-string (second mag-match)))]
     (if (and tension-type magnitude)
-      (let [tension (field/add-tension! {:type tension-type :magnitude magnitude})]
+      (do
+        (field/add-tension! {:type tension-type :magnitude magnitude})
         (format "Added tension of type %s with magnitude %.2f" 
                 (name tension-type) magnitude))
       "Could not extract valid tension parameters from the intent")))

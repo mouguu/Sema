@@ -1,6 +1,5 @@
 (ns sema.emergent
-  (:require [clara.rules :refer [defrule defquery insert! mk-session]]
-            [clara.rules.accumulators :as acc]))
+  (:require [clara.rules :refer [defrule defquery insert! mk-session query]]))
 
 ;; Define record structures for facts
 (defrecord Field [valence density decay])
@@ -8,20 +7,39 @@
 (defrecord Event [type entity-id timestamp details])
 
 ;; Define queries to extract information from the session
-(defquery get-fields
+(defquery ^:public get-fields-query
   []
   [?field <- Field])
 
-(defquery get-entities
+(defquery ^:public get-entities-query
   []
   [?entity <- Entity])
 
-(defquery get-events
+(defquery ^:public get-events-query
   []
   [?event <- Event])
 
-;; Define rule for individuation process
-(defrule trigger-individuation
+;; Public wrapper functions for the queries
+(defn get-fields
+  "Get all Field facts from the session"
+  [session]
+  (query session get-fields-query))
+
+(defn get-entities
+  "Get all Entity facts from the session"
+  [session]
+  (query session get-entities-query))
+
+(defn get-events
+  "Get all Event facts from the session"
+  [session]
+  (query session get-events-query))
+
+;; This rule will be loaded by Clara when mk-session is called with
+;; this namespace. Linters may incorrectly flag it as unused.
+;; Clara Rules requires this rule to be defined at the top level.
+#_{:clj-kondo/ignore [:unused-private-var]}
+(defrule ^:private trigger-individuation
   "Triggers individuation process when field density exceeds threshold and 
    a dormant semiotic entity exists"
   [Field (> density 0.6)]

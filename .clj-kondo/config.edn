@@ -1,0 +1,8 @@
+{:linters {:unresolved-symbol {:exclude [(clara.rules/defrule)
+                                       (clara.rules/defquery)]}
+           :unresolved-var {:exclude [clara.rules/defrule
+                                      clara.rules/defquery
+                                      clara.rules/insert!]}}
+
+ :lint-as {clara.rules/defrule clojure.core/def
+           clara.rules/defquery clojure.core/def}} 
