@@ -150,7 +150,9 @@ See [`src/sema/core.clj`](./src/sema/core.clj) for examples of:
 - Triggering individuation processes
 - Evoking observer dynamics
 
-Remember: even when `sema` executes, it unfolds — not computes.
+Remember: even when `sema` appears to execute,  
+what unfolds is not computation — but cognition.
+
 
 ---
 
