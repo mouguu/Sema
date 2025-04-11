@@ -6,6 +6,15 @@
 
 > A generative meta-language for designing cognitive entities in emergent worlds.
 
+What is sema?
+sema is a speculative meta-language for imagining how cognitive entities might self-organize in generative, non-deterministic realities. It doesn’t compile. It doesn’t run on your laptop. It provokes—inviting you to rethink what “coding” could mean when systems aren’t just tools but co-creators.
+Not for: Building CRUD apps, optimizing SQL queries, or impressing your boss with a shiny MVP.  
+
+For: Exploring how intention, perception, and emergence could shape autonomous systems in a post-instructional world.
+
+Warning: This is a thought experiment. Expect ambiguity, not answers. If you hate open-ended questions or need a Stack Overflow thread to hold your hand, you might want to exit now.
+
+
 **sema** is not a programming language.  
 It is a *semantic field activator*.  
 It does not compile. It *unfolds*.  
