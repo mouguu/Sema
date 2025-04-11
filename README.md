@@ -107,6 +107,18 @@ To declare is not to assert control, but to create conditions for *becoming*.
 
 ---
 
+## 🔒 Defensive Clarifications
+
+* No, it won’t run in VS Code. It isn’t meant to.
+
+* No, it’s not an answer to your product roadmap.
+
+* Yes, it’s abstract — that’s the point.
+
+* If you need unit tests, you're too early. If you're asking questions that don’t have answers yet, you’re right on time.
+
+---
+
 ## 🧙🏼‍♂️ Final Note
 
 > Don’t build systems.  
