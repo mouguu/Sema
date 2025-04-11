@@ -2,7 +2,7 @@
 
 🧠 `project: sema` — *A speculative generative language for sovereign cognitive design*
 
----
+
 > A generative meta-language for designing cognitive entities in emergent worlds.
 
 **sema** is not a programming language.  
