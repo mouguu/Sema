@@ -24,8 +24,10 @@ It is meant for the age of **generative reality**, where structure is not built,
 but evoked — where systems are not instructed, but **individuated**.
 It is meant for the age of **generative reality**, where structure is not built,  
 but evoked — where systems are not instructed, but **individuated**.
-It is for some people  can’t bear the rigid workflow in regular lifestyle, 
-they had to  examine the whole things was happening in a wrong way but can‘t stop it.
+It is for those who cannot bear the rigidity of prescribed workflows,  
+those who sense the world unfolding in the wrong direction—  
+and yet feel unable to interrupt its momentum.
+
 
 ---
 
@@ -133,6 +135,25 @@ To declare is not to assert control, but to create conditions for *becoming*.
 * If you need unit tests, you're too early. If you're asking questions that don’t have answers yet, you’re right on time.
 
 ---
+
+---
+
+### 🛠️ Experimental Implementation (Clojure Prototype)
+
+Though `sema` is not a programming language in the conventional sense, this repository contains a **Clojure-based prototype** that manifests some of its primitive constructs (`field`, `emergent`, `observer`, etc.) as a symbolic DSL.
+
+This implementation is not meant to compile in a deterministic pipeline, but rather to simulate the **semantic scaffolding** and **dialogic structures** that `sema` proposes.
+
+See [`src/sema/core.clj`](./src/sema/core.clj) for examples of:
+
+- Initializing semantic fields
+- Triggering individuation processes
+- Evoking observer dynamics
+
+Remember: even when `sema` executes, it unfolds — not computes.
+
+---
+
 
 ## 🧙🏼‍♂️ Final Note
 
