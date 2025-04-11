@@ -1,0 +1,1 @@
+# Sema---A-speculative-generative-language-for-sovereign-cognitive-design
