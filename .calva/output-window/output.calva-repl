@@ -1,0 +1,93 @@
+(run-example)
+; Initializing sema simulation...
+; 
+; Field initialized:
+; === Field State ===
+; {:valence :neutral, :density 0.5, :decay :medium}
+; 
+; History (last 5 entries):
+; ==================
+; 
+; Initial session state:
+; === Observed State ===
+; 
+; Fields:
+; {:valence :curiosity, :density 0.5, :decay :slow}
+; 
+; Entities:
+; {:id "e2", :substrate "material", :state :dormant}
+; {:id "e1", :substrate "semiotic", :state :dormant}
+; 
+; Events:
+; 
+; =====================
+; 
+; 
+; Updating field density to 0.7...
+; Adding tension of type curiosity...
+; === Field State ===
+; {:valence :neutral, :density 0.7, :decay :medium}
+; 
+; History (last 5 entries):
+; {:type :curiosity,
+;  :magnitude 0.6,
+;  :timestamp #inst "2025-04-12T08:19:53.253-00:00"}
+; ==================
+; 
+; Individuation triggered for entity e1
+; 
+; Updated session state (after density increase):
+; === Observed State ===
+; 
+; Fields:
+; {:valence :neutral, :density 0.7, :decay :medium}
+; 
+; Entities:
+; {:id "e2", :substrate "material", :state :dormant}
+; {:id "e1", :substrate "semiotic", :state :dormant}
+; 
+; Events:
+; {:type :individuation,
+;  :entity-id "e1",
+;  :timestamp #inst "2025-04-12T08:19:53.270-00:00",
+;  :details
+;  {:description
+;   "Entity is individuating due to sufficient field density"}}
+; 
+; =====================
+; 
+nil
+clj꞉sema.core꞉> 
+
+(dialogue/dialogue-step "update density to 0.8")
+"Field density updated to 0.80"
+clj꞉sema.core꞉> 
+(dialogue/dialogue-step "update density to 1.1")
+"Field density updated to 1.10"
+clj꞉sema.core꞉> 
+"Field density updated to 1.10"
+clj꞉sema.core꞉> 
+
+(clara/insert(emergent/->Entity "e1" "semiotic":active))
+; Execution error (IllegalArgumentException) at clara.rules.engine/eval3657$fn$G (engine.cljc:76).
+; No implementation of method: :insert of protocol: #'clara.rules.engine/ISession found for class: sema.emergent.Entity
+clj꞉sema.core꞉> 
+
+(-> (emergent/create-session)
+    (clara/insert (emergent/->Entity "e1" "semiotic" :active))
+    (clara/fire-rules)
+    (observer/observe-state)
+    (println))
+; === Observed State ===
+; 
+; Fields:
+; 
+; Entities:
+; {:id "e1", :substrate "semiotic", :state :active}
+; 
+; Events:
+; 
+; =====================
+; 
+nil
+clj꞉sema.core꞉> 

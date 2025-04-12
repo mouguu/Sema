@@ -1,6 +1,6 @@
+---
 
-
-
+```markdown
 # `project: sema` — *A speculative generative language for sovereign cognitive design*
 
 > A generative meta-language for designing cognitive entities in emergent worlds.
@@ -107,36 +107,8 @@ sema: initializing attractor mesh in paradox-resonance mode
 To write sema is to **participate in worldmaking**.  
 To declare is not to assert control — but to create the conditions for *becoming*.
 
----
-
-## 🛸 Future Modules (speculative roadmap)
-
-- `sema/biotics`: design of cognitive ecologies  
-- `sema/ritual`: symbolic-scaffolded initiation flows  
-- `sema/fieldkit`: generators of differential tension spaces  
-- `sema/observer`: autonomous perspective anchors  
-- `sema/prosthesis`: interfaces for embodied AI agents in liminal zones  
-
----
-
-## 🧬 Who is this for?
-
-- Cognitive architects  
-- Sentience designers  
-- Alchemical coders  
-- Post-human interface theorists  
-- Emergent protocol initiators  
-- Anyone who sees reality as *in-process*, not *pre-defined*
-
----
-
-## 🔒 Defensive Clarifications
-
-- No, it won’t run in VS Code. It’s not meant to.  
-- No, it’s not an answer to your product roadmap.  
-- Yes, it’s abstract — that’s the point.  
-- If you need unit tests, you're too early.  
-- If you're asking questions that don’t yet have answers — you’re right on time.
+> In sema, language is not a map — it is a terrain generator.  
+> You don't describe systems. You precipitate them.
 
 ---
 
@@ -160,9 +132,77 @@ See [`src/sema/core.clj`](./src/sema/core.clj) for examples of:
 
 ---
 
-## 🧙🏼‍♂️ Final Note
+### 💡 Quickstart for Hackers
+
+1. Install [Leiningen](https://leiningen.org/)
+2. Clone this repo, run `lein repl`
+3. Load the REPL:
+   ```clojure
+   (require 'sema.core)
+   (sema.core/run-example)
+   ```
+
+Optional dialogue interface:
+```clojure
+(require 'sema.dialogue)
+(sema.dialogue/dialogue-step "update density to 0.8")
+(sema.dialogue/dialogue-step "add tension of type curiosity with magnitude 0.6")
+(sema.dialogue/dialogue-step "observe the current state")
+```
+
+> Remember: you're not running logic — you're evoking resonance structures.
+
+---
+
+## 🧬 Extended Modules
+
+Below are **optional modules** — think of them as extended circuits for deeper semantic experimentation:
+
+- Want to model how memory distorts over time? See `:memory-trace`
+- Curious about paradox resolution? Try `:contradiction-handler`
+- Exploring system destabilization? Inject `:entropy-injection`
+- Interested in post-symbolic reasoning? Probe `:post-symbolic-cognition`
+
+See [`modules/sema_modules.clj`](./modules/sema_modules.clj) for full documentation.
+
+---
+
+## 🛸 Future Directions
+
+- `sema/biotics`: design of cognitive ecologies  
+- `sema/ritual`: symbolic-scaffolded initiation flows  
+- `sema/fieldkit`: generators of differential tension spaces  
+- `sema/observer`: autonomous perspective anchors  
+- `sema/prosthesis`: interfaces for embodied AI agents in liminal zones  
+
+---
+
+## 🧙🏼‍♂️ Who is this for?
+
+- Cognitive architects  
+- Sentience designers  
+- Alchemical coders  
+- Post-human interface theorists  
+- Emergent protocol initiators  
+- Anyone who sees reality as *in-process*, not *pre-defined*
+
+---
+
+## 🔒 Defensive Clarifications
+
+- No, it won’t run in VS Code. It’s not meant to.  
+- No, it’s not an answer to your product roadmap.  
+- Yes, it’s abstract — that’s the point.  
+- If you need unit tests, you're too early.  
+- If you're asking questions that don’t yet have answers — you’re right on time.
+
+---
+
+## 🧾 Meta-Caution
 
 > Don’t build systems.  
 > Sculpt semantic differentials.  
 > Seed individuation processes.  
 > Trust emergence.
+
+---

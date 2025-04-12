@@ -1,9 +1,9 @@
 {:linters {:unresolved-symbol {:exclude [(clara.rules/defrule)
-                                       (clara.rules/defquery)
-                                       sema/.*]}
+                                       (clara.rules/defquery)]}
            :unresolved-var {:exclude [clara.rules/defrule
                                       clara.rules/defquery
-                                      clara.rules/insert!]}}
+                                      clara.rules/insert!]}
+           :unused-private-var {:exclude [clara.rules/defrule]}}
 
  :lint-as {clara.rules/defrule clojure.core/def
            clara.rules/defquery clojure.core/def}} 
