@@ -1,5 +1,6 @@
 {:linters {:unresolved-symbol {:exclude [(clara.rules/defrule)
-                                       (clara.rules/defquery)]}
+                                       (clara.rules/defquery)
+                                       sema/.*]}
            :unresolved-var {:exclude [clara.rules/defrule
                                       clara.rules/defquery
                                       clara.rules/insert!]}}
