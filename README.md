@@ -1,4 +1,3 @@
-```markdown
 # `sema` — *A speculative generative language for sovereign cognitive design*
 
 > A generative meta-language for designing cognitive entities in emergent worlds.
@@ -206,4 +205,3 @@ See [`modules/sema_modules.clj`](./modules/sema_modules.clj) for full documentat
 > Sculpt semantic differentials.
 > Seed individuation processes.
 > Trust emergence.
-```
